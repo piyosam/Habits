@@ -1,0 +1,466 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Report xmlns="http://schemas.microsoft.com/sqlserver/reporting/2005/01/reportdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
+  <DataSources>
+    <DataSource Name="DummyDataSource">
+      <rd:DataSourceID>3ef483a0-7839-4a2b-bd41-81cd6c7de56e</rd:DataSourceID>
+      <ConnectionProperties>
+        <DataProvider>SQL</DataProvider>
+        <ConnectString>Data Source=(local)\HABITS;Initial Catalog=habits;Persist Security Info=True;User ID=sa;Password=swj</ConnectString>
+      </ConnectionProperties>
+    </DataSource>
+  </DataSources>
+  <InteractiveHeight>29.7cm</InteractiveHeight>
+  <rd:DrawGrid>true</rd:DrawGrid>
+  <InteractiveWidth>21cm</InteractiveWidth>
+  <rd:GridSpacing>0.25cm</rd:GridSpacing>
+  <rd:SnapToGrid>true</rd:SnapToGrid>
+  <rd:ReportID>2e52a725-72b6-4aaf-83ac-32fd8163a7e4</rd:ReportID>
+  <PageWidth>21cm</PageWidth>
+  <DataSets>
+    <DataSet Name="DS0001_ブランクレシート">
+      <Fields>
+        <Field Name="社名">
+          <DataField>社名</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="店名1">
+          <DataField>店名1</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="店名2">
+          <DataField>店名2</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="店住所1">
+          <DataField>店住所1</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="店住所2">
+          <DataField>店住所2</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="店電話番号">
+          <DataField>店電話番号</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="金額">
+          <DataField>金額</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="消費税">
+          <DataField>消費税</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="データタイプ">
+          <DataField>データタイプ</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+      </Fields>
+      <Query>
+        <DataSourceName>DummyDataSource</DataSourceName>
+        <CommandText />
+        <rd:UseGenericDesigner>true</rd:UseGenericDesigner>
+      </Query>
+      <rd:DataSetInfo>
+        <rd:DataSetName>DS0001</rd:DataSetName>
+        <rd:TableName>ブランクレシート</rd:TableName>
+      </rd:DataSetInfo>
+    </DataSet>
+  </DataSets>
+  <Width>8.0185cm</Width>
+  <Body>
+    <ColumnSpacing>1cm</ColumnSpacing>
+    <ReportItems>
+      <Table Name="table2">
+        <ZIndex>20</ZIndex>
+        <Filters>
+          <Filter>
+            <FilterExpression>=Fields!データタイプ.Value</FilterExpression>
+            <Operator>Equal</Operator>
+            <FilterValues>
+              <FilterValue>=1</FilterValue>
+            </FilterValues>
+          </Filter>
+        </Filters>
+        <Top>0.8cm</Top>
+        <Width>7.5cm</Width>
+        <Details>
+          <TableRows>
+            <TableRow>
+              <TableCells>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="textbox10">
+                      <Style>
+                        <FontFamily>ＭＳ Ｐゴシック</FontFamily>
+                        <TextAlign>Center</TextAlign>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                      <CanGrow>true</CanGrow>
+                      <Value>=Fields!店名1.Value</Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+              </TableCells>
+              <Height>0.4cm</Height>
+            </TableRow>
+          </TableRows>
+        </Details>
+        <Style>
+          <FontFamily>ＭＳ Ｐ明朝</FontFamily>
+          <FontSize>28pt</FontSize>
+          <FontWeight>700</FontWeight>
+        </Style>
+        <TableColumns>
+          <TableColumn>
+            <Width>7.5cm</Width>
+          </TableColumn>
+        </TableColumns>
+        <Height>0.4cm</Height>
+      </Table>
+      <Table Name="tblCompany">
+        <ZIndex>19</ZIndex>
+        <Filters>
+          <Filter>
+            <FilterExpression>=Fields!データタイプ.Value</FilterExpression>
+            <Operator>Equal</Operator>
+            <FilterValues>
+              <FilterValue>=0</FilterValue>
+            </FilterValues>
+          </Filter>
+        </Filters>
+        <Width>7.5cm</Width>
+        <Details>
+          <TableRows>
+            <TableRow>
+              <TableCells>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="textbox16">
+                      <rd:DefaultName>textbox16</rd:DefaultName>
+                      <Style>
+                        <FontFamily>ＭＳ Ｐ明朝</FontFamily>
+                        <FontSize>28pt</FontSize>
+                        <FontWeight>700</FontWeight>
+                        <TextAlign>Center</TextAlign>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                      <CanGrow>true</CanGrow>
+                      <Value>=Fields!店名1.Value</Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+              </TableCells>
+              <Height>0.8cm</Height>
+            </TableRow>
+          </TableRows>
+        </Details>
+        <Style>
+          <FontFamily>ＭＳ Ｐ明朝</FontFamily>
+          <FontSize>28pt</FontSize>
+          <FontWeight>700</FontWeight>
+        </Style>
+        <TableColumns>
+          <TableColumn>
+            <Width>7.5cm</Width>
+          </TableColumn>
+        </TableColumns>
+        <Height>0.8cm</Height>
+      </Table>
+      <Textbox Name="textbox3">
+        <Top>8.75cm</Top>
+        <Width>7.5cm</Width>
+        <Style>
+          <FontFamily>ＭＳ Ｐゴシック</FontFamily>
+          <FontSize>9pt</FontSize>
+          <TextAlign>Center</TextAlign>
+          <VerticalAlign>Bottom</VerticalAlign>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+        <ZIndex>18</ZIndex>
+        <CanGrow>true</CanGrow>
+        <Left>0.0185cm</Left>
+        <Height>0.5cm</Height>
+        <Value>　　　　　　　　　　　　　　　　　　　　　　　　印</Value>
+      </Textbox>
+      <Line Name="line3">
+        <Top>7.1cm</Top>
+        <Width>6.75cm</Width>
+        <Style>
+          <BorderStyle>
+            <Default>Solid</Default>
+          </BorderStyle>
+          <BorderWidth>
+            <Default>0.7pt</Default>
+          </BorderWidth>
+          <FontFamily>MS UI Gothic</FontFamily>
+        </Style>
+        <ZIndex>17</ZIndex>
+        <Left>0.25cm</Left>
+        <Height>0cm</Height>
+      </Line>
+      <Textbox Name="textbox2">
+        <Top>6.35cm</Top>
+        <Width>7cm</Width>
+        <Style>
+          <FontFamily>ＭＳ Ｐゴシック</FontFamily>
+          <TextAlign>Left</TextAlign>
+          <PaddingLeft>10pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>5pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+        <ZIndex>16</ZIndex>
+        <CanGrow>true</CanGrow>
+        <Height>0.75cm</Height>
+        <Value>但し、</Value>
+      </Textbox>
+      <Textbox Name="textbox1">
+        <Top>4.79855cm</Top>
+        <Width>6.75cm</Width>
+        <Style>
+          <FontFamily>ＭＳ Ｐゴシック</FontFamily>
+          <FontSize>18pt</FontSize>
+          <Format>"　　\　" #,###　"-　"</Format>
+          <TextAlign>Left</TextAlign>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>5pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+        <ZIndex>15</ZIndex>
+        <CanGrow>true</CanGrow>
+        <Left>0.75cm</Left>
+        <Height>0.75cm</Height>
+        <Value>=IIf(Fields!金額.Value&lt;&gt;0,Fields!金額.Value,"　　\")</Value>
+      </Textbox>
+      <Line Name="line2">
+        <Top>5.75cm</Top>
+        <Width>6.75cm</Width>
+        <Style>
+          <BorderStyle>
+            <Default>Solid</Default>
+          </BorderStyle>
+          <BorderWidth>
+            <Default>0.7pt</Default>
+          </BorderWidth>
+          <FontFamily>MS UI Gothic</FontFamily>
+        </Style>
+        <ZIndex>14</ZIndex>
+        <Left>0.25cm</Left>
+        <Height>0cm</Height>
+      </Line>
+      <Line Name="line1">
+        <Top>4.65cm</Top>
+        <Width>6.75cm</Width>
+        <Style>
+          <BorderStyle>
+            <Default>Solid</Default>
+          </BorderStyle>
+          <BorderWidth>
+            <Default>0.7pt</Default>
+          </BorderWidth>
+          <FontFamily>MS UI Gothic</FontFamily>
+        </Style>
+        <ZIndex>13</ZIndex>
+        <Left>0.25cm</Left>
+        <Height>0cm</Height>
+      </Line>
+      <Textbox Name="textbox26">
+        <Top>10.14418cm</Top>
+        <Width>8cm</Width>
+        <Style>
+          <FontFamily>ＭＳ Ｐゴシック</FontFamily>
+          <TextAlign>Left</TextAlign>
+          <PaddingLeft>10pt</PaddingLeft>
+        </Style>
+        <ZIndex>12</ZIndex>
+        <CanGrow>true</CanGrow>
+        <Value>保管して頂くようお願いいたします。</Value>
+      </Textbox>
+      <Textbox Name="textbox25">
+        <Top>9.75cm</Top>
+        <Width>8cm</Width>
+        <Style>
+          <FontFamily>ＭＳ Ｐゴシック</FontFamily>
+          <TextAlign>Left</TextAlign>
+          <PaddingLeft>10pt</PaddingLeft>
+        </Style>
+        <ZIndex>11</ZIndex>
+        <CanGrow>true</CanGrow>
+        <Height>0.4cm</Height>
+        <Value>※保管上のお願い　印刷面を内側に折って</Value>
+      </Textbox>
+      <Textbox Name="textbox22">
+        <Top>7.65cm</Top>
+        <Width>7.5cm</Width>
+        <Style>
+          <FontFamily>ＭＳ Ｐゴシック</FontFamily>
+          <PaddingLeft>10pt</PaddingLeft>
+        </Style>
+        <ZIndex>10</ZIndex>
+        <CanGrow>true</CanGrow>
+        <Height>0.4cm</Height>
+        <Value>上記正に領収致しました。</Value>
+      </Textbox>
+      <Textbox Name="textbox21">
+        <rd:DefaultName>textbox21</rd:DefaultName>
+        <Top>7.25cm</Top>
+        <Width>7.5cm</Width>
+        <Style>
+          <FontFamily>ＭＳ Ｐゴシック</FontFamily>
+          <Format>yyyy年M月d日 (ddd) H:mm</Format>
+          <TextAlign>Left</TextAlign>
+          <PaddingLeft>10pt</PaddingLeft>
+        </Style>
+        <ZIndex>9</ZIndex>
+        <CanGrow>true</CanGrow>
+        <Height>0.4cm</Height>
+        <Value>=Now()</Value>
+      </Textbox>
+      <Textbox Name="textbox7">
+        <Top>3cm</Top>
+        <Width>7.5cm</Width>
+        <Style>
+          <FontFamily>ＭＳ Ｐゴシック</FontFamily>
+          <FontSize>16pt</FontSize>
+          <TextAlign>Center</TextAlign>
+        </Style>
+        <ZIndex>8</ZIndex>
+        <CanGrow>true</CanGrow>
+        <Height>0.75cm</Height>
+        <Value>領　収　書</Value>
+      </Textbox>
+      <Textbox Name="textbox9">
+        <Top>5.75cm</Top>
+        <Width>1.75cm</Width>
+        <Style>
+          <FontFamily>ＭＳ Ｐゴシック</FontFamily>
+          <TextAlign>Left</TextAlign>
+          <VerticalAlign>Middle</VerticalAlign>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>5pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+        <ZIndex>7</ZIndex>
+        <CanGrow>true</CanGrow>
+        <Left>0.75cm</Left>
+        <Height>0.6cm</Height>
+        <Value>（内消費税</Value>
+      </Textbox>
+      <Textbox Name="textbox8">
+        <Top>3.9cm</Top>
+        <Width>7.5cm</Width>
+        <Style>
+          <FontFamily>ＭＳ Ｐゴシック</FontFamily>
+          <FontSize>12pt</FontSize>
+          <TextAlign>Center</TextAlign>
+          <VerticalAlign>Bottom</VerticalAlign>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+        <ZIndex>6</ZIndex>
+        <CanGrow>true</CanGrow>
+        <Height>0.75cm</Height>
+        <Value>　　　　　　　　　　　　　　　　　　様</Value>
+      </Textbox>
+      <Textbox Name="店電話番号">
+        <rd:DefaultName>店電話番号</rd:DefaultName>
+        <Top>2.4cm</Top>
+        <Width>7.5cm</Width>
+        <Style>
+          <FontFamily>ＭＳ Ｐゴシック</FontFamily>
+          <TextAlign>Center</TextAlign>
+        </Style>
+        <ZIndex>5</ZIndex>
+        <CanGrow>true</CanGrow>
+        <Height>0.4cm</Height>
+        <Value>="ＴＥＬ：" &amp; Fields!店電話番号.Value</Value>
+      </Textbox>
+      <Textbox Name="店住所2">
+        <rd:DefaultName>店住所2</rd:DefaultName>
+        <Top>2cm</Top>
+        <Width>7.5cm</Width>
+        <Style>
+          <FontFamily>ＭＳ Ｐゴシック</FontFamily>
+          <TextAlign>Center</TextAlign>
+        </Style>
+        <ZIndex>4</ZIndex>
+        <CanGrow>true</CanGrow>
+        <Height>0.4cm</Height>
+        <Value>=Fields!店住所2.Value</Value>
+      </Textbox>
+      <Textbox Name="店住所1">
+        <rd:DefaultName>店住所1</rd:DefaultName>
+        <Top>1.6cm</Top>
+        <Width>7.5cm</Width>
+        <Style>
+          <FontFamily>ＭＳ Ｐゴシック</FontFamily>
+          <TextAlign>Center</TextAlign>
+        </Style>
+        <ZIndex>3</ZIndex>
+        <CanGrow>true</CanGrow>
+        <Height>0.4cm</Height>
+        <Value>=Fields!店住所1.Value</Value>
+      </Textbox>
+      <Textbox Name="店名2">
+        <rd:DefaultName>店名2</rd:DefaultName>
+        <Top>1.2cm</Top>
+        <Width>7.5cm</Width>
+        <Style>
+          <FontFamily>ＭＳ Ｐゴシック</FontFamily>
+          <TextAlign>Center</TextAlign>
+        </Style>
+        <ZIndex>2</ZIndex>
+        <CanGrow>true</CanGrow>
+        <Height>0.4cm</Height>
+        <Value>=Fields!店名2.Value</Value>
+      </Textbox>
+      <Textbox Name="textbox4">
+        <Top>5.75cm</Top>
+        <Width>0.3cm</Width>
+        <Style>
+          <FontFamily>ＭＳ Ｐゴシック</FontFamily>
+          <TextAlign>Left</TextAlign>
+          <VerticalAlign>Middle</VerticalAlign>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>5pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+        <ZIndex>1</ZIndex>
+        <CanGrow>true</CanGrow>
+        <Left>6.23545cm</Left>
+        <Height>0.6cm</Height>
+        <Value>）</Value>
+      </Textbox>
+      <Textbox Name="textbox5">
+        <Top>5.75cm</Top>
+        <Width>3.5cm</Width>
+        <Style>
+          <FontFamily>ＭＳ Ｐゴシック</FontFamily>
+          <Format>"\" #,##0</Format>
+          <TextAlign>Left</TextAlign>
+          <VerticalAlign>Middle</VerticalAlign>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>5pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+        <CanGrow>true</CanGrow>
+        <Left>2.5cm</Left>
+        <Height>0.6cm</Height>
+        <Value>=IIf(Fields!消費税.Value&lt;&gt;0,Fields!消費税.Value,"　　　")</Value>
+      </Textbox>
+    </ReportItems>
+    <Height>10.54418cm</Height>
+  </Body>
+  <Language>ja-JP</Language>
+  <PageHeight>29.7cm</PageHeight>
+</Report>

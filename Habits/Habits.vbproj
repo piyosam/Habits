@@ -1,0 +1,860 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="14.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{D97D01EC-E2EE-47D1-8263-E5859F031BC1}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <StartupObject>Habits.My.MyApplication</StartupObject>
+    <RootNamespace>Habits</RootNamespace>
+    <AssemblyName>Habits</AssemblyName>
+    <MyType>WindowsForms</MyType>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <ApplicationIcon>Icon\favico.ico</ApplicationIcon>
+    <ManifestCertificateThumbprint>EF6B40EC3AF7FF17BD2DFFB49A4F19FD06FA1786</ManifestCertificateThumbprint>
+    <ManifestKeyFile>Habits_TemporaryKey.pfx</ManifestKeyFile>
+    <GenerateManifests>true</GenerateManifests>
+    <SignManifests>true</SignManifests>
+    <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>2.0</OldToolsVersion>
+    <PublishUrl>ftp://125.206.115.103/wwwroot/habits.swj.co.jp/swj/datasync/SystemData/</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <AutorunEnabled>true</AutorunEnabled>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.0</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>Habits.xml</DocumentationFile>
+    <NoWarn>42353,42354,42355</NoWarn>
+    <WarningsAsErrors>
+    </WarningsAsErrors>
+    <RegisterForComInterop>true</RegisterForComInterop>
+    <Optimize>true</Optimize>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>..\..\..\HABITS\System\</OutputPath>
+    <DocumentationFile>Habits.xml</DocumentationFile>
+    <NoWarn>42353,42354,42355</NoWarn>
+    <WarningsAsErrors>
+    </WarningsAsErrors>
+    <RegisterForComInterop>true</RegisterForComInterop>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <SpecificVersion>False</SpecificVersion>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.configuration">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Data">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Drawing">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Windows.Forms">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Xml">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="vjslib">
+      <Private>False</Private>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Configuration" />
+    <Import Include="System.Data" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Globalization" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ApplicationEvents.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DB\DBAccess.vb" />
+    <Compile Include="DB\DBParameter.vb" />
+    <Compile Include="Logic\a0100_Logic.vb" />
+    <Compile Include="Logic\a0200_Logic.vb" />
+    <Compile Include="Logic\a0300_Logic.vb" />
+    <Compile Include="Logic\a0400_Logic.vb" />
+    <Compile Include="Logic\a0500_Logic.vb" />
+    <Compile Include="Logic\a0600_Logic.vb" />
+    <Compile Include="Logic\a0800_Logic.vb" />
+    <Compile Include="Logic\a0900_Logic.vb" />
+    <Compile Include="Logic\a1000_Logic.vb" />
+    <Compile Include="Logic\a1100_Logic.vb" />
+    <Compile Include="Logic\a1300_Logic.vb" />
+    <Compile Include="Logic\a1500_Logic.vb" />
+    <Compile Include="Logic\a1600_Logic.vb" />
+    <Compile Include="Logic\a1800_Logic.vb" />
+    <Compile Include="Logic\c0100_Logic.vb" />
+    <Compile Include="Logic\c0200_Logic.vb" />
+    <Compile Include="Logic\c0300_Logic.vb" />
+    <Compile Include="Logic\c0400_Logic.vb" />
+    <Compile Include="Logic\c0500_Logic.vb" />
+    <Compile Include="Logic\d0200_Logic.vb" />
+    <Compile Include="Logic\d0300_Logic.vb" />
+    <Compile Include="Logic\d0400_Logic.vb" />
+    <Compile Include="Logic\d0500_Logic.vb" />
+    <Compile Include="Logic\f0100_Logic.vb" />
+    <Compile Include="Logic\f0500_Logic.vb" />
+    <Compile Include="Logic\f0600_Logic.vb" />
+    <Compile Include="Logic\f0700_logic.vb" />
+    <Compile Include="Logic\f0800_Logic.vb" />
+    <Compile Include="Logic\f0900_Logic.vb" />
+    <Compile Include="Logic\f1000_Logic.vb" />
+    <Compile Include="Logic\f1100_Logic.vb" />
+    <Compile Include="Logic\h0100_Logic.vb">
+    </Compile>
+    <Compile Include="Logic\h0200_Logic.vb" />
+    <Compile Include="Logic\h0300_Logic.vb" />
+    <Compile Include="Logic\h0400_Logic.vb" />
+    <Compile Include="Logic\ImeComposition.vb" />
+    <Compile Include="Logic\LogicBase.vb" />
+    <Compile Include="Logic\MultiThread_Logic.vb" />
+    <Compile Include="Logic\SwitchData.vb" />
+    <Compile Include="Logic\z0200_Logic.vb" />
+    <Compile Include="Logic\z0300_Logic.vb" />
+    <Compile Include="Logic\z0400_Logic.vb" />
+    <Compile Include="Logic\z0500_logic.vb" />
+    <Compile Include="Logic\z0600_Logic.vb" />
+    <Compile Include="Logic\a1400_Logic.vb" />
+    <Compile Include="Logic\i0100_Logic.vb" />
+    <Compile Include="Logic\a1900_Logic.vb" />
+    <Compile Include="Logic\a2000_Logic.vb" />
+    <Compile Include="Logic\z0700_Logic.vb" />
+    <Compile Include="Logic\f1200_Logic.vb" />
+    <Compile Include="My Project\Settings.Designer.vb">
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <AutoGen>True</AutoGen>
+    </Compile>
+    <Compile Include="フォーム\a0100_ロード中.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="フォーム\a0100_ロード中.Designer.vb">
+      <DependentUpon>a0100_ロード中.vb</DependentUpon>
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="フォーム\a0200_メイン.Designer.vb">
+      <DependentUpon>a0200_メイン.vb</DependentUpon>
+    </Compile>
+    <Compile Include="フォーム\a0200_メイン.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="フォーム\a0300_来店.Designer.vb">
+      <DependentUpon>a0300_来店.vb</DependentUpon>
+    </Compile>
+    <Compile Include="フォーム\a0300_来店.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="フォーム\a0400_作業時間設定.Designer.vb">
+      <DependentUpon>a0400_作業時間設定.vb</DependentUpon>
+    </Compile>
+    <Compile Include="フォーム\a0400_作業時間設定.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="フォーム\a0500_顧客番号設定.Designer.vb">
+      <DependentUpon>a0500_顧客番号設定.vb</DependentUpon>
+    </Compile>
+    <Compile Include="フォーム\a0500_顧客番号設定.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="フォーム\a0600_営業日.Designer.vb">
+      <DependentUpon>a0600_営業日.vb</DependentUpon>
+    </Compile>
+    <Compile Include="フォーム\a0600_営業日.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="フォーム\a0700_日付設定.Designer.vb">
+      <DependentUpon>a0700_日付設定.vb</DependentUpon>
+    </Compile>
+    <Compile Include="フォーム\a0700_日付設定.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="フォーム\a0800_スタッフ選択.Designer.vb">
+      <DependentUpon>a0800_スタッフ選択.vb</DependentUpon>
+    </Compile>
+    <Compile Include="フォーム\a0800_スタッフ選択.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="フォーム\a0900_伝言メモ.Designer.vb">
+      <DependentUpon>a0900_伝言メモ.vb</DependentUpon>
+    </Compile>
+    <Compile Include="フォーム\a0900_伝言メモ.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="フォーム\a1000_ユーザー情報.Designer.vb">
+      <DependentUpon>a1000_ユーザー情報.vb</DependentUpon>
+    </Compile>
+    <Compile Include="フォーム\a1000_ユーザー情報.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="フォーム\a1100_目標額.Designer.vb">
+      <DependentUpon>a1100_目標額.vb</DependentUpon>
+    </Compile>
+    <Compile Include="フォーム\a1100_目標額.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="フォーム\a1300_カルテ.Designer.vb">
+      <DependentUpon>a1300_カルテ.vb</DependentUpon>
+    </Compile>
+    <Compile Include="フォーム\a1300_カルテ.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="フォーム\a1500_作業時間設定.Designer.vb">
+      <DependentUpon>a1500_作業時間設定.vb</DependentUpon>
+    </Compile>
+    <Compile Include="フォーム\a1500_作業時間設定.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="フォーム\a1600_発注画面.Designer.vb">
+      <DependentUpon>a1600_発注画面.vb</DependentUpon>
+    </Compile>
+    <Compile Include="フォーム\a1600_発注画面.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="フォーム\a1700_バージョン情報.Designer.vb">
+      <DependentUpon>a1700_バージョン情報.vb</DependentUpon>
+    </Compile>
+    <Compile Include="フォーム\a1700_バージョン情報.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="フォーム\a1800_通信設定.Designer.vb">
+      <DependentUpon>a1800_通信設定.vb</DependentUpon>
+    </Compile>
+    <Compile Include="フォーム\a1800_通信設定.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="フォーム\a1900_メッセージ一覧.Designer.vb">
+      <DependentUpon>a1900_メッセージ一覧.vb</DependentUpon>
+    </Compile>
+    <Compile Include="フォーム\a1900_メッセージ一覧.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="フォーム\c0100_売上.Designer.vb">
+      <DependentUpon>c0100_売上.vb</DependentUpon>
+    </Compile>
+    <Compile Include="フォーム\c0100_売上.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="フォーム\c0200_売上入力.Designer.vb">
+      <DependentUpon>c0200_売上入力.vb</DependentUpon>
+    </Compile>
+    <Compile Include="フォーム\c0200_売上入力.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="フォーム\c0300_売上担当.Designer.vb">
+      <DependentUpon>c0300_売上担当.vb</DependentUpon>
+    </Compile>
+    <Compile Include="フォーム\c0300_売上担当.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="フォーム\c0400_会計.Designer.vb">
+      <DependentUpon>c0400_会計.vb</DependentUpon>
+    </Compile>
+    <Compile Include="フォーム\c0400_会計.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="フォーム\c0500_メモ設定.Designer.vb">
+      <DependentUpon>c0500_メモ設定.vb</DependentUpon>
+    </Compile>
+    <Compile Include="フォーム\c0500_メモ設定.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="フォーム\d0200_営業日.Designer.vb">
+      <DependentUpon>d0200_営業日.vb</DependentUpon>
+    </Compile>
+    <Compile Include="フォーム\d0200_営業日.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="フォーム\d0300_店集計.Designer.vb">
+      <DependentUpon>d0300_店集計.vb</DependentUpon>
+    </Compile>
+    <Compile Include="フォーム\d0300_店集計.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="フォーム\d0400_来店者.Designer.vb">
+      <DependentUpon>d0400_来店者.vb</DependentUpon>
+    </Compile>
+    <Compile Include="フォーム\d0400_来店者.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="フォーム\d0500_現金入出金登録.Designer.vb">
+      <DependentUpon>d0500_現金入出金登録.vb</DependentUpon>
+    </Compile>
+    <Compile Include="フォーム\d0500_現金入出金登録.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="フォーム\f0100_顧客登録.Designer.vb">
+      <DependentUpon>f0100_顧客登録.vb</DependentUpon>
+    </Compile>
+    <Compile Include="フォーム\f0100_顧客登録.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="フォーム\f0500_分類.designer.vb">
+      <DependentUpon>f0500_分類.vb</DependentUpon>
+    </Compile>
+    <Compile Include="フォーム\f0500_分類.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="フォーム\f0500_商品.Designer.vb">
+      <DependentUpon>f0500_商品.vb</DependentUpon>
+    </Compile>
+    <Compile Include="フォーム\f0500_商品.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="フォーム\f0500_売上区分.Designer.vb">
+      <DependentUpon>f0500_売上区分.vb</DependentUpon>
+    </Compile>
+    <Compile Include="フォーム\f0500_売上区分.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="フォーム\f0600_担当者.Designer.vb">
+      <DependentUpon>f0600_担当者.vb</DependentUpon>
+    </Compile>
+    <Compile Include="フォーム\f0600_担当者.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="フォーム\f0700_メーカー.Designer.vb">
+      <DependentUpon>f0700_メーカー.vb</DependentUpon>
+    </Compile>
+    <Compile Include="フォーム\f0700_メーカー.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="フォーム\f0800_カード会社.Designer.vb">
+      <DependentUpon>f0800_カード会社.vb</DependentUpon>
+    </Compile>
+    <Compile Include="フォーム\f0800_カード会社.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="フォーム\f0900_サービス.Designer.vb">
+      <DependentUpon>f0900_サービス.vb</DependentUpon>
+    </Compile>
+    <Compile Include="フォーム\f0900_サービス.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="フォーム\f1000_工程.Designer.vb">
+      <DependentUpon>f1000_工程.vb</DependentUpon>
+    </Compile>
+    <Compile Include="フォーム\f1000_工程.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="フォーム\f1100_工程マスタ.Designer.vb">
+      <DependentUpon>f1100_工程マスタ.vb</DependentUpon>
+    </Compile>
+    <Compile Include="フォーム\f1100_工程マスタ.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="フォーム\h0100_データ抽出.Designer.vb">
+      <DependentUpon>h0100_データ抽出.vb</DependentUpon>
+    </Compile>
+    <Compile Include="フォーム\h0100_データ抽出.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="フォーム\h0200_確認.Designer.vb">
+      <DependentUpon>h0200_確認.vb</DependentUpon>
+    </Compile>
+    <Compile Include="フォーム\h0200_確認.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="フォーム\h0300_顧客.Designer.vb">
+      <DependentUpon>h0300_顧客.vb</DependentUpon>
+    </Compile>
+    <Compile Include="フォーム\h0300_顧客.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="フォーム\h0400_未登録者.Designer.vb">
+      <DependentUpon>h0400_未登録者.vb</DependentUpon>
+    </Compile>
+    <Compile Include="フォーム\h0400_未登録者.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="フォーム\i0100_メッセージ登録.Designer.vb">
+      <DependentUpon>i0100_メッセージ登録.vb</DependentUpon>
+    </Compile>
+    <Compile Include="フォーム\i0100_メッセージ登録.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="フォーム\z0100_progressForm.Designer.vb">
+      <DependentUpon>z0100_progressForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="フォーム\z0100_progressForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="フォーム\z_0200_空番号選択.Designer.vb">
+      <DependentUpon>z_0200_空番号選択.vb</DependentUpon>
+    </Compile>
+    <Compile Include="フォーム\z_0200_空番号選択.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="フォーム\z_0600_郵便番号検索.Designer.vb">
+      <DependentUpon>z_0600_郵便番号検索.vb</DependentUpon>
+    </Compile>
+    <Compile Include="フォーム\z_0600_郵便番号検索.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="フォーム\z_0500_顧客変更.Designer.vb">
+      <DependentUpon>z_0500_顧客変更.vb</DependentUpon>
+    </Compile>
+    <Compile Include="フォーム\z_0500_顧客変更.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="フォーム\z_0400_顧客情報.Designer.vb">
+      <DependentUpon>z_0400_顧客情報.vb</DependentUpon>
+    </Compile>
+    <Compile Include="フォーム\z_0400_顧客情報.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="フォーム\z_0300_顧客検索.Designer.vb">
+      <DependentUpon>z_0300_顧客検索.vb</DependentUpon>
+    </Compile>
+    <Compile Include="フォーム\z_0300_顧客検索.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="フォーム\a1400_入出庫.Designer.vb">
+      <DependentUpon>a1400_入出庫.vb</DependentUpon>
+    </Compile>
+    <Compile Include="フォーム\a1400_入出庫.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="フォーム\a1400_入出庫登録.Designer.vb">
+      <DependentUpon>a1400_入出庫登録.vb</DependentUpon>
+    </Compile>
+    <Compile Include="フォーム\a1400_入出庫登録.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="フォーム\a2000_モード変更.Designer.vb">
+      <DependentUpon>a2000_モード変更.vb</DependentUpon>
+    </Compile>
+    <Compile Include="フォーム\a2000_モード変更.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="フォーム\z0700_パスワード変更.Designer.vb">
+      <DependentUpon>z0700_パスワード変更.vb</DependentUpon>
+    </Compile>
+    <Compile Include="フォーム\z0700_パスワード変更.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="フォーム\d0600_履歴ログ出力.Designer.vb">
+      <DependentUpon>d0600_履歴ログ出力.vb</DependentUpon>
+    </Compile>
+    <Compile Include="フォーム\d0600_履歴ログ出力.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="フォーム\f1200_ポイント割引.Designer.vb">
+      <DependentUpon>f1200_ポイント割引.vb</DependentUpon>
+    </Compile>
+    <Compile Include="フォーム\f1200_ポイント割引.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="レポート\DS0001.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DS0001.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="レポート\DS0001.vb">
+      <DependentUpon>DS0001.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="標準モジュール\FileUtil.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="標準モジュール\WebClientEx.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="標準モジュール\MultiThread.vb" />
+    <Compile Include="標準モジュール\ReportUtil.vb" />
+    <Compile Include="標準モジュール\MultiThreadMsg.vb" />
+    <Compile Include="標準モジュール\レポート.vb" />
+    <Compile Include="標準モジュール\テーブル.vb" />
+    <Compile Include="標準モジュール\システム.vb" />
+    <Compile Include="標準モジュール\メニュー.vb" />
+    <Compile Include="標準モジュール\宣言.vb" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="フォーム\a0100_ロード中.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>a0100_ロード中.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="フォーム\a0200_メイン.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>a0200_メイン.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="フォーム\a0300_来店.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>a0300_来店.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="フォーム\a0400_作業時間設定.resx">
+      <DependentUpon>a0400_作業時間設定.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="フォーム\a0500_顧客番号設定.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>a0500_顧客番号設定.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="フォーム\a0600_営業日.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>a0600_営業日.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="フォーム\a0700_日付設定.resx">
+      <DependentUpon>a0700_日付設定.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="フォーム\a0800_スタッフ選択.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>a0800_スタッフ選択.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="フォーム\a0900_伝言メモ.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>a0900_伝言メモ.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="フォーム\a1000_ユーザー情報.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>a1000_ユーザー情報.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="フォーム\a1100_目標額.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>a1100_目標額.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="フォーム\a1300_カルテ.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>a1300_カルテ.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="フォーム\a1500_作業時間設定.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>a1500_作業時間設定.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="フォーム\a1600_発注画面.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>a1600_発注画面.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="フォーム\a1700_バージョン情報.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>a1700_バージョン情報.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="フォーム\a1800_通信設定.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>a1800_通信設定.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="フォーム\a1900_メッセージ一覧.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>a1900_メッセージ一覧.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="フォーム\c0100_売上.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>c0100_売上.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="フォーム\c0200_売上入力.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>c0200_売上入力.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="フォーム\c0300_売上担当.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>c0300_売上担当.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="フォーム\c0400_会計.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>c0400_会計.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="フォーム\c0500_メモ設定.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>c0500_メモ設定.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="フォーム\d0200_営業日.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>d0200_営業日.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="フォーム\d0300_店集計.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>d0300_店集計.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="フォーム\d0400_来店者.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>d0400_来店者.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="フォーム\d0500_現金入出金登録.resx">
+      <DependentUpon>d0500_現金入出金登録.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="フォーム\f0100_顧客登録.resx">
+      <DependentUpon>f0100_顧客登録.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="フォーム\f0500_分類.resx">
+      <DependentUpon>f0500_分類.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="フォーム\f0500_商品.resx">
+      <DependentUpon>f0500_商品.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="フォーム\f0500_売上区分.resx">
+      <DependentUpon>f0500_売上区分.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="フォーム\f0600_担当者.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>f0600_担当者.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="フォーム\f0700_メーカー.resx">
+      <DependentUpon>f0700_メーカー.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="フォーム\f0800_カード会社.resx">
+      <DependentUpon>f0800_カード会社.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="フォーム\f0900_サービス.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>f0900_サービス.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="フォーム\f1000_工程.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>f1000_工程.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="フォーム\f1100_工程マスタ.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>f1100_工程マスタ.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="フォーム\h0100_データ抽出.resx">
+      <DependentUpon>h0100_データ抽出.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="フォーム\h0200_確認.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>h0200_確認.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="フォーム\h0300_顧客.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>h0300_顧客.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="フォーム\h0400_未登録者.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>h0400_未登録者.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="フォーム\i0100_メッセージ登録.resx">
+      <DependentUpon>i0100_メッセージ登録.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="フォーム\z0100_progressForm.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>z0100_progressForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="フォーム\z_0200_空番号選択.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>z_0200_空番号選択.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="フォーム\z_0600_郵便番号検索.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>z_0600_郵便番号検索.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="フォーム\z_0500_顧客変更.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>z_0500_顧客変更.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="フォーム\z_0400_顧客情報.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>z_0400_顧客情報.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="フォーム\z_0300_顧客検索.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>z_0300_顧客検索.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="フォーム\a1400_入出庫.resx">
+      <DependentUpon>a1400_入出庫.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="フォーム\a1400_入出庫登録.resx">
+      <DependentUpon>a1400_入出庫登録.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="フォーム\a2000_モード変更.resx">
+      <DependentUpon>a2000_モード変更.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="フォーム\z0700_パスワード変更.resx">
+      <DependentUpon>z0700_パスワード変更.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="フォーム\d0600_履歴ログ出力.resx">
+      <DependentUpon>d0600_履歴ログ出力.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="フォーム\f1200_ポイント割引.resx">
+      <DependentUpon>f1200_ポイント割引.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="レポート\d0601_精算レシート.rdlc" />
+    <EmbeddedResource Include="レポート\c0101_伝票.rdlc" />
+    <EmbeddedResource Include="レポート\c0401_レシート.rdlc" />
+    <EmbeddedResource Include="レポート\c0501_領収書.rdlc" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="Habits_TemporaryKey.pfx" />
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My</CustomToolNamespace>
+    </None>
+    <None Include="レポート\DS0001.xsc">
+      <DependentUpon>DS0001.xsd</DependentUpon>
+    </None>
+    <None Include="レポート\DS0001.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DS0001.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="レポート\DS0001.xss">
+      <DependentUpon>DS0001.xsd</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="BusinessObjects.CrystalReports.NET.2.0">
+      <Visible>False</Visible>
+      <ProductName>Crystal Reports for .NET Framework 2.0</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Data.Access.Components.2.8">
+      <Visible>False</Visible>
+      <ProductName>Microsoft Data Access Components 2.8</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.JSharp.2.0">
+      <Visible>False</Visible>
+      <ProductName>Microsoft Visual J# 再頒布可能パッケージ 2.0</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.2.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 2.0</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.ReportViewer.8.0">
+      <Visible>False</Visible>
+      <ProductName>Microsoft Visual Studio 2005 レポート ビューア</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Sql.Server.Express.1.0">
+      <Visible>False</Visible>
+      <ProductName>SQL Server 2005 Express Edition</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Visual.C++.8.0.x86">
+      <Visible>False</Visible>
+      <ProductName>Visual C++ ランタイム ライブラリ %28x86%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.2.0">
+      <Visible>False</Visible>
+      <ProductName>Windows インストーラ 2.0</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows インストーラ 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="Excel">
+      <Guid>{00020813-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>5</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <Private>False</Private>
+    </COMReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Icon\favico.ico" />
+    <Content Include="Img\all-left.png" />
+    <Content Include="Img\all-right.png" />
+    <Content Include="Img\dateset.png" />
+    <Content Include="Img\down.png" />
+    <Content Include="Img\find.png" />
+    <Content Include="Img\left.png" />
+    <Content Include="Img\load.jpg" />
+    <Content Include="Img\message.png" />
+    <Content Include="Img\right.png" />
+    <Content Include="Img\stuff.png" />
+    <Content Include="Img\up.png" />
+    <Content Include="Img\version.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Resources\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.VisualBasic.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

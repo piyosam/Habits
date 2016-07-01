@@ -1,0 +1,608 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Report xmlns="http://schemas.microsoft.com/sqlserver/reporting/2005/01/reportdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
+  <DataSources>
+    <DataSource Name="DummyDataSource">
+      <rd:DataSourceID>088fe22e-514d-4115-a460-f6f9a9a1301d</rd:DataSourceID>
+      <ConnectionProperties>
+        <DataProvider>SQL</DataProvider>
+        <ConnectString>Data Source=(local)\HABITS;Initial Catalog=habits;Persist Security Info=True;User ID=sa;Password=swj</ConnectString>
+      </ConnectionProperties>
+    </DataSource>
+  </DataSources>
+  <InteractiveHeight>29.7cm</InteractiveHeight>
+  <rd:DrawGrid>true</rd:DrawGrid>
+  <InteractiveWidth>21cm</InteractiveWidth>
+  <rd:GridSpacing>0.25cm</rd:GridSpacing>
+  <rd:SnapToGrid>false</rd:SnapToGrid>
+  <rd:ReportID>4e90280f-3209-409c-b2b8-1296489d04b5</rd:ReportID>
+  <PageWidth>21cm</PageWidth>
+  <DataSets>
+    <DataSet Name="DS0001_精算レシート">
+      <Fields>
+        <Field Name="社名">
+          <DataField>社名</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="店名1">
+          <DataField>店名1</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="店名2">
+          <DataField>店名2</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="店住所1">
+          <DataField>店住所1</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="店住所2">
+          <DataField>店住所2</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="店電話番号">
+          <DataField>店電話番号</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="精算日">
+          <DataField>精算日</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="客数">
+          <DataField>客数</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="現金入金">
+          <DataField>現金入金</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="現金外入金">
+          <DataField>現金外入金</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="売上消費税">
+          <DataField>売上消費税</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="入金純売上">
+          <DataField>入金純売上</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="その他入金">
+          <DataField>その他入金</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="その他">
+          <DataField>その他</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="純売上">
+          <DataField>純売上</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="データタイプ">
+          <DataField>データタイプ</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+      </Fields>
+      <Query>
+        <DataSourceName>DummyDataSource</DataSourceName>
+        <CommandText />
+        <rd:UseGenericDesigner>true</rd:UseGenericDesigner>
+      </Query>
+      <rd:DataSetInfo>
+        <rd:DataSetName>DS0001</rd:DataSetName>
+        <rd:TableName>精算レシート</rd:TableName>
+      </rd:DataSetInfo>
+    </DataSet>
+  </DataSets>
+  <Width>8cm</Width>
+  <Body>
+    <ColumnSpacing>1cm</ColumnSpacing>
+    <ReportItems>
+      <Table Name="tblCompany">
+        <ZIndex>22</ZIndex>
+        <Filters>
+          <Filter>
+            <FilterExpression>=Fields!データタイプ.Value</FilterExpression>
+            <Operator>Equal</Operator>
+            <FilterValues>
+              <FilterValue>=0</FilterValue>
+            </FilterValues>
+          </Filter>
+        </Filters>
+        <Width>7.52646cm</Width>
+        <Details>
+          <TableRows>
+            <TableRow>
+              <TableCells>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="textbox4">
+                      <Style>
+                        <FontFamily>ＭＳ Ｐ明朝</FontFamily>
+                        <FontSize>28pt</FontSize>
+                        <FontWeight>700</FontWeight>
+                        <TextAlign>Center</TextAlign>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                      <CanGrow>true</CanGrow>
+                      <Value>=Fields!店名1.Value</Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+              </TableCells>
+              <Height>0.8cm</Height>
+            </TableRow>
+          </TableRows>
+        </Details>
+        <Style>
+          <FontFamily>ＭＳ Ｐ明朝</FontFamily>
+          <FontSize>28pt</FontSize>
+          <FontWeight>700</FontWeight>
+        </Style>
+        <TableColumns>
+          <TableColumn>
+            <Width>7.52646cm</Width>
+          </TableColumn>
+        </TableColumns>
+        <Height>0.8cm</Height>
+      </Table>
+      <Table Name="table2">
+        <ZIndex>21</ZIndex>
+        <Filters>
+          <Filter>
+            <FilterExpression>=Fields!データタイプ.Value</FilterExpression>
+            <Operator>Equal</Operator>
+            <FilterValues>
+              <FilterValue>=1</FilterValue>
+            </FilterValues>
+          </Filter>
+        </Filters>
+        <Top>0.8cm</Top>
+        <Width>7.52646cm</Width>
+        <Details>
+          <TableRows>
+            <TableRow>
+              <TableCells>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="textbox3">
+                      <Style>
+                        <FontFamily>ＭＳ Ｐゴシック</FontFamily>
+                        <TextAlign>Center</TextAlign>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                      <CanGrow>true</CanGrow>
+                      <Value>=Fields!店名1.Value</Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+              </TableCells>
+              <Height>0.4cm</Height>
+            </TableRow>
+          </TableRows>
+        </Details>
+        <Style>
+          <FontFamily>ＭＳ Ｐ明朝</FontFamily>
+          <FontSize>28pt</FontSize>
+          <FontWeight>700</FontWeight>
+        </Style>
+        <TableColumns>
+          <TableColumn>
+            <Width>7.52646cm</Width>
+          </TableColumn>
+        </TableColumns>
+        <Height>0.4cm</Height>
+      </Table>
+      <Textbox Name="textbox1">
+        <Top>5.93762cm</Top>
+        <Width>3.51455cm</Width>
+        <Style>
+          <BorderStyle>
+            <Default>Groove</Default>
+          </BorderStyle>
+          <BorderWidth>
+            <Default>0.7pt</Default>
+          </BorderWidth>
+          <FontFamily>ＭＳ Ｐゴシック</FontFamily>
+          <FontSize>11pt</FontSize>
+          <TextAlign>Right</TextAlign>
+          <VerticalAlign>Middle</VerticalAlign>
+          <PaddingRight>2pt</PaddingRight>
+        </Style>
+        <ZIndex>20</ZIndex>
+        <CanGrow>true</CanGrow>
+        <Left>3.30951cm</Left>
+        <Height>0.5cm</Height>
+        <Value>=Fields!その他.Value &amp; "円"</Value>
+      </Textbox>
+      <Textbox Name="textbox2">
+        <Top>5.93762cm</Top>
+        <Width>2.5cm</Width>
+        <Style>
+          <BorderStyle>
+            <Default>Groove</Default>
+          </BorderStyle>
+          <BorderWidth>
+            <Default>0.7pt</Default>
+          </BorderWidth>
+          <FontFamily>ＭＳ Ｐゴシック</FontFamily>
+          <FontSize>11pt</FontSize>
+          <TextAlign>Center</TextAlign>
+          <VerticalAlign>Middle</VerticalAlign>
+        </Style>
+        <ZIndex>19</ZIndex>
+        <CanGrow>true</CanGrow>
+        <Left>0.80951cm</Left>
+        <Height>0.5cm</Height>
+        <Value>その他</Value>
+      </Textbox>
+      <Textbox Name="純売上">
+        <rd:DefaultName>純売上</rd:DefaultName>
+        <Top>7.10646cm</Top>
+        <Width>3.51455cm</Width>
+        <Style>
+          <BorderStyle>
+            <Default>Groove</Default>
+          </BorderStyle>
+          <BorderWidth>
+            <Default>0.7pt</Default>
+          </BorderWidth>
+          <FontFamily>ＭＳ Ｐゴシック</FontFamily>
+          <FontSize>11pt</FontSize>
+          <TextAlign>Right</TextAlign>
+          <VerticalAlign>Middle</VerticalAlign>
+          <PaddingRight>2pt</PaddingRight>
+        </Style>
+        <ZIndex>18</ZIndex>
+        <CanGrow>true</CanGrow>
+        <Left>3.30951cm</Left>
+        <Height>0.5cm</Height>
+        <Value>=Fields!純売上.Value &amp; "円"</Value>
+      </Textbox>
+      <Textbox Name="売上消費税">
+        <rd:DefaultName>売上消費税</rd:DefaultName>
+        <Top>6.43762cm</Top>
+        <Width>3.51455cm</Width>
+        <Style>
+          <BorderStyle>
+            <Default>Groove</Default>
+          </BorderStyle>
+          <BorderWidth>
+            <Default>0.7pt</Default>
+          </BorderWidth>
+          <FontFamily>ＭＳ Ｐゴシック</FontFamily>
+          <FontSize>11pt</FontSize>
+          <TextAlign>Right</TextAlign>
+          <VerticalAlign>Middle</VerticalAlign>
+          <PaddingRight>2pt</PaddingRight>
+        </Style>
+        <ZIndex>17</ZIndex>
+        <CanGrow>true</CanGrow>
+        <Left>3.30951cm</Left>
+        <Height>0.5cm</Height>
+        <Value>=Fields!売上消費税.Value &amp; "円"</Value>
+      </Textbox>
+      <Textbox Name="現金外入金">
+        <rd:DefaultName>現金外入金</rd:DefaultName>
+        <Top>5.43762cm</Top>
+        <Width>3.51455cm</Width>
+        <Style>
+          <BorderStyle>
+            <Default>Groove</Default>
+          </BorderStyle>
+          <BorderWidth>
+            <Default>0.7pt</Default>
+          </BorderWidth>
+          <FontFamily>ＭＳ Ｐゴシック</FontFamily>
+          <FontSize>11pt</FontSize>
+          <TextAlign>Right</TextAlign>
+          <VerticalAlign>Middle</VerticalAlign>
+          <PaddingRight>2pt</PaddingRight>
+        </Style>
+        <ZIndex>16</ZIndex>
+        <CanGrow>true</CanGrow>
+        <Left>3.30951cm</Left>
+        <Height>0.5cm</Height>
+        <Value>=Fields!現金外入金.Value &amp; "円"</Value>
+      </Textbox>
+      <Textbox Name="現金入金">
+        <rd:DefaultName>現金入金</rd:DefaultName>
+        <Top>4.93762cm</Top>
+        <Width>3.51455cm</Width>
+        <Style>
+          <BorderStyle>
+            <Default>Groove</Default>
+          </BorderStyle>
+          <BorderWidth>
+            <Default>0.7pt</Default>
+          </BorderWidth>
+          <FontFamily>ＭＳ Ｐゴシック</FontFamily>
+          <FontSize>11pt</FontSize>
+          <TextAlign>Right</TextAlign>
+          <VerticalAlign>Middle</VerticalAlign>
+          <PaddingRight>2pt</PaddingRight>
+        </Style>
+        <ZIndex>15</ZIndex>
+        <CanGrow>true</CanGrow>
+        <Left>3.30951cm</Left>
+        <Height>0.5cm</Height>
+        <Value>=Fields!現金入金.Value &amp; "円"</Value>
+      </Textbox>
+      <Textbox Name="客数">
+        <rd:DefaultName>客数</rd:DefaultName>
+        <Top>4.43762cm</Top>
+        <Width>3.51455cm</Width>
+        <Style>
+          <BorderStyle>
+            <Default>Groove</Default>
+          </BorderStyle>
+          <BorderWidth>
+            <Default>0.7pt</Default>
+          </BorderWidth>
+          <FontFamily>ＭＳ Ｐゴシック</FontFamily>
+          <FontSize>11pt</FontSize>
+          <TextAlign>Right</TextAlign>
+          <VerticalAlign>Middle</VerticalAlign>
+          <PaddingRight>2pt</PaddingRight>
+        </Style>
+        <ZIndex>14</ZIndex>
+        <CanGrow>true</CanGrow>
+        <Left>3.30951cm</Left>
+        <Height>0.5cm</Height>
+        <Value>=Fields!客数.Value &amp; "人"</Value>
+      </Textbox>
+      <Textbox Name="精算日">
+        <rd:DefaultName>精算日</rd:DefaultName>
+        <Top>3.78995cm</Top>
+        <Width>3.51455cm</Width>
+        <Style>
+          <BorderStyle>
+            <Default>Groove</Default>
+          </BorderStyle>
+          <BorderWidth>
+            <Default>0.7pt</Default>
+          </BorderWidth>
+          <FontFamily>ＭＳ Ｐゴシック</FontFamily>
+          <FontSize>11pt</FontSize>
+          <TextAlign>Center</TextAlign>
+          <VerticalAlign>Middle</VerticalAlign>
+        </Style>
+        <ZIndex>13</ZIndex>
+        <CanGrow>true</CanGrow>
+        <Left>3.30951cm</Left>
+        <Height>0.5cm</Height>
+        <Value>=Fields!精算日.Value</Value>
+      </Textbox>
+      <Textbox Name="textbox13">
+        <Top>7.10646cm</Top>
+        <Width>2.5cm</Width>
+        <Style>
+          <BorderStyle>
+            <Default>Groove</Default>
+          </BorderStyle>
+          <BorderWidth>
+            <Default>0.7pt</Default>
+          </BorderWidth>
+          <FontFamily>ＭＳ Ｐゴシック</FontFamily>
+          <FontSize>11pt</FontSize>
+          <TextAlign>Center</TextAlign>
+          <VerticalAlign>Middle</VerticalAlign>
+        </Style>
+        <ZIndex>12</ZIndex>
+        <CanGrow>true</CanGrow>
+        <Left>0.80951cm</Left>
+        <Height>0.5cm</Height>
+        <Value>純売上</Value>
+      </Textbox>
+      <Textbox Name="textbox12">
+        <Top>6.43762cm</Top>
+        <Width>2.5cm</Width>
+        <Style>
+          <BorderStyle>
+            <Default>Groove</Default>
+          </BorderStyle>
+          <BorderWidth>
+            <Default>0.7pt</Default>
+          </BorderWidth>
+          <FontFamily>ＭＳ Ｐゴシック</FontFamily>
+          <FontSize>11pt</FontSize>
+          <TextAlign>Center</TextAlign>
+          <VerticalAlign>Middle</VerticalAlign>
+        </Style>
+        <ZIndex>11</ZIndex>
+        <CanGrow>true</CanGrow>
+        <Left>0.80951cm</Left>
+        <Height>0.5cm</Height>
+        <Value>売上消費税</Value>
+      </Textbox>
+      <Textbox Name="textbox11">
+        <Top>5.43762cm</Top>
+        <Width>2.5cm</Width>
+        <Style>
+          <BorderStyle>
+            <Default>Groove</Default>
+          </BorderStyle>
+          <BorderWidth>
+            <Default>0.7pt</Default>
+          </BorderWidth>
+          <FontFamily>ＭＳ Ｐゴシック</FontFamily>
+          <FontSize>11pt</FontSize>
+          <TextAlign>Center</TextAlign>
+          <VerticalAlign>Middle</VerticalAlign>
+        </Style>
+        <ZIndex>10</ZIndex>
+        <CanGrow>true</CanGrow>
+        <Left>0.80951cm</Left>
+        <Height>0.5cm</Height>
+        <Value>現金外入金</Value>
+      </Textbox>
+      <Textbox Name="textbox10">
+        <Top>4.93762cm</Top>
+        <Width>2.5cm</Width>
+        <Style>
+          <BorderStyle>
+            <Default>Groove</Default>
+          </BorderStyle>
+          <BorderWidth>
+            <Default>0.7pt</Default>
+          </BorderWidth>
+          <FontFamily>ＭＳ Ｐゴシック</FontFamily>
+          <FontSize>11pt</FontSize>
+          <TextAlign>Center</TextAlign>
+          <VerticalAlign>Middle</VerticalAlign>
+        </Style>
+        <ZIndex>9</ZIndex>
+        <CanGrow>true</CanGrow>
+        <Left>0.80951cm</Left>
+        <Height>0.5cm</Height>
+        <Value>現金入金</Value>
+      </Textbox>
+      <Textbox Name="textbox9">
+        <Top>4.43762cm</Top>
+        <Width>2.5cm</Width>
+        <Style>
+          <BorderStyle>
+            <Default>Groove</Default>
+          </BorderStyle>
+          <BorderWidth>
+            <Default>0.7pt</Default>
+          </BorderWidth>
+          <FontFamily>ＭＳ Ｐゴシック</FontFamily>
+          <FontSize>11pt</FontSize>
+          <TextAlign>Center</TextAlign>
+          <VerticalAlign>Middle</VerticalAlign>
+        </Style>
+        <ZIndex>8</ZIndex>
+        <CanGrow>true</CanGrow>
+        <Left>0.80951cm</Left>
+        <Height>0.5cm</Height>
+        <Value>客　数</Value>
+      </Textbox>
+      <Textbox Name="textbox8">
+        <rd:DefaultName>textbox8</rd:DefaultName>
+        <Top>3.78995cm</Top>
+        <Width>2.5cm</Width>
+        <Style>
+          <BorderStyle>
+            <Default>Groove</Default>
+          </BorderStyle>
+          <BorderWidth>
+            <Default>0.7pt</Default>
+          </BorderWidth>
+          <FontFamily>ＭＳ Ｐゴシック</FontFamily>
+          <FontSize>11pt</FontSize>
+          <TextAlign>Center</TextAlign>
+          <VerticalAlign>Middle</VerticalAlign>
+        </Style>
+        <ZIndex>7</ZIndex>
+        <CanGrow>true</CanGrow>
+        <Left>0.80951cm</Left>
+        <Height>0.5cm</Height>
+        <Value>精算日</Value>
+      </Textbox>
+      <Textbox Name="textbox22">
+        <Top>8.11974cm</Top>
+        <Width>7.5cm</Width>
+        <Style>
+          <FontFamily>ＭＳ Ｐゴシック</FontFamily>
+          <TextAlign>Center</TextAlign>
+          <VerticalAlign>Middle</VerticalAlign>
+        </Style>
+        <ZIndex>6</ZIndex>
+        <CanGrow>true</CanGrow>
+        <Height>0.4cm</Height>
+        <Value>上記の通り、報告致します。</Value>
+      </Textbox>
+      <Textbox Name="textbox21">
+        <rd:DefaultName>textbox21</rd:DefaultName>
+        <Top>7.71974cm</Top>
+        <Width>7.5cm</Width>
+        <Style>
+          <FontFamily>ＭＳ Ｐゴシック</FontFamily>
+          <Format>yyyy年M月d日 (ddd) H時m分</Format>
+          <TextAlign>Center</TextAlign>
+          <VerticalAlign>Middle</VerticalAlign>
+        </Style>
+        <ZIndex>5</ZIndex>
+        <CanGrow>true</CanGrow>
+        <Height>0.4cm</Height>
+        <Value>=Now()</Value>
+      </Textbox>
+      <Textbox Name="textbox7">
+        <Top>2.95037cm</Top>
+        <Width>7.5cm</Width>
+        <Style>
+          <FontFamily>ＭＳ Ｐゴシック</FontFamily>
+          <FontSize>16pt</FontSize>
+          <TextAlign>Center</TextAlign>
+          <VerticalAlign>Middle</VerticalAlign>
+        </Style>
+        <ZIndex>4</ZIndex>
+        <CanGrow>true</CanGrow>
+        <Height>0.65cm</Height>
+        <Value>精　算　書</Value>
+      </Textbox>
+      <Textbox Name="店電話番号">
+        <rd:DefaultName>店電話番号</rd:DefaultName>
+        <Top>2.4cm</Top>
+        <Width>7.5cm</Width>
+        <Style>
+          <FontFamily>ＭＳ Ｐゴシック</FontFamily>
+          <TextAlign>Center</TextAlign>
+        </Style>
+        <ZIndex>3</ZIndex>
+        <CanGrow>true</CanGrow>
+        <Height>0.4cm</Height>
+        <Value>="ＴＥＬ：" &amp; Fields!店電話番号.Value</Value>
+      </Textbox>
+      <Textbox Name="店住所2">
+        <rd:DefaultName>店住所2</rd:DefaultName>
+        <Top>2cm</Top>
+        <Width>7.5cm</Width>
+        <Style>
+          <FontFamily>ＭＳ Ｐゴシック</FontFamily>
+          <TextAlign>Center</TextAlign>
+        </Style>
+        <ZIndex>2</ZIndex>
+        <CanGrow>true</CanGrow>
+        <Height>0.4cm</Height>
+        <Value>=Fields!店住所2.Value</Value>
+      </Textbox>
+      <Textbox Name="店住所1">
+        <rd:DefaultName>店住所1</rd:DefaultName>
+        <Top>1.6cm</Top>
+        <Width>7.5cm</Width>
+        <Style>
+          <FontFamily>ＭＳ Ｐゴシック</FontFamily>
+          <TextAlign>Center</TextAlign>
+        </Style>
+        <ZIndex>1</ZIndex>
+        <CanGrow>true</CanGrow>
+        <Height>0.4cm</Height>
+        <Value>=Fields!店住所1.Value</Value>
+      </Textbox>
+      <Textbox Name="店名2">
+        <rd:DefaultName>店名2</rd:DefaultName>
+        <Top>1.2cm</Top>
+        <Width>7.5cm</Width>
+        <Style>
+          <FontFamily>ＭＳ Ｐゴシック</FontFamily>
+          <TextAlign>Center</TextAlign>
+        </Style>
+        <CanGrow>true</CanGrow>
+        <Height>0.4cm</Height>
+        <Value>=Fields!店名2.Value</Value>
+      </Textbox>
+    </ReportItems>
+    <Height>8.70265cm</Height>
+  </Body>
+  <Language>ja-JP</Language>
+  <PageHeight>29.7cm</PageHeight>
+</Report>
